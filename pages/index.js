@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Mulish } from 'next/font/google'
 import styles from '@/styles/Home.module.scss'
 import Layout from '@/components/Layout/Layout'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const inter = Mulish({ 
   weight: ['200','300','400','500','600', '700','800','900','1000'],

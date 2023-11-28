@@ -1,0 +1,120 @@
+.TopNavigationContainer{
+    position: fixed;
+    top: 0;
+    background-color: white;
+    height: 15vh;
+    width: 100vw;
+    box-shadow: 0px 12px 15px -3px rgba(0,0,0,0.1);
+    z-index: 10;
+    .TopInfoBar{
+        border-bottom: solid 1px lightgray;
+        .TopInfoBarContainer{
+            height: 8.8vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .Logo{
+                // width: 20%;
+                a{
+                    text-decoration: none;
+                    font-size: 25px;
+                    font-weight: 500;
+                    span{
+                        color: green;
+                    }
+                }
+            }
+            .Searchbar{
+                width: 65%;
+                .SearchBox{
+                    position: relative;
+                    border: solid 1px lightgray;
+                    padding:0;
+                    display: flex;
+                    align-items: center;
+                    height: 5.5vh;
+                    // justify-content: space-between;
+                    gap: 5px;
+                    svg{
+                        margin-left: 10px;
+                       color: lightgray;
+                    }
+                    input[type=text]{
+                        border:none;
+                        outline: none;
+                        width: 60%;
+                      &::placeholder{
+                        color: lightgray;
+                      }
+                    }
+                    label{
+                        position: absolute;
+                        right: 0;
+                        border-left: 1px solid lightgray;
+                        display: inline-block;
+                        font-size: 12px;
+                        padding: 10px 12px;
+                        cursor: pointer;
+                        background-color: #fff8f5;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: rgb(93, 40, 48) !important;
+                        gap: 5px;
+                        svg{
+                            font-size: 14px;  
+                            color: rgb(93, 40, 48) !important;
+                        }
+                       
+                        input[type=file]{
+                            display: none;
+                        }
+                    }
+                   
+                    
+                }
+            }
+            .LeftIcons{
+                // width: 40%;
+                .IconItems{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    svg{
+                        cursor: pointer;
+                        font-size: 28px;
+                        color: rgb(93, 40, 48) !important;
+                        &:hover{
+                            opacity: 0.8;
+                        }
+                        &:nth-last-child(2){
+                           color: #25D366 !important; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .TopMenubar{
+        height: 5.2vh;
+        display: flex;
+        align-items: center;
+        .MenuListContainer{
+            width: 100%;
+            .MenuItems{
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                a{
+                    text-decoration: none;
+                    color: rgba(14, 2, 2, 0.899);
+                    font-size: 14px;
+                    &:last-child{
+                        color: rgb(93, 40, 48) !important;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
