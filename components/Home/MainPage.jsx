@@ -1,13 +1,13 @@
 import React from 'react'
 import { Container } from 'react-bootstrap';
 import Slider from './Slider/Slider';
-import BrandBadge from './BrandBadge/BrandBAdge';
+import BadgeBrand from './BadgeBrand/BadgeBrand';
 
 function MainPageComponent() {
   return (
     <Container>
       <Slider/>
-      <BrandBadge />
+      <BadgeBrand />
     </Container>
   )
 }
