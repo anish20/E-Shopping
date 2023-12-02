@@ -4,6 +4,7 @@ import { Mulish } from 'next/font/google'
 import styles from '@/styles/Home.module.scss'
 import Layout from '@/components/Layout/Layout'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import MainPageComponent from '@/components/Home/MainPage'
 
 const inter = Mulish({ 
   weight: ['200','300','400','500','600', '700','800','900','1000'],
@@ -23,7 +24,7 @@ export default function Home() {
       </Head>
       <Layout>
       <main className={`${styles.main} ${inter.className}`}>
-
+        <MainPageComponent />
       </main>
       </Layout>
     </>
