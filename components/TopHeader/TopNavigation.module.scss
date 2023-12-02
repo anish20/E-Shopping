@@ -1,6 +1,7 @@
 @import "../../styles/Home.module.scss";
 .Header{ 
-    position: fixed;
+       position: fixed;
+       z-index: 999999999;    
     .TopNavigationContainer{
         position: fixed;
         top: 0;
@@ -108,6 +109,11 @@
                     overflow: hidden;
                 .DropdownItem {
                    .DropdownLink {
+                    @include fontSize1400px{
+                        font-size: .65rem;
+                        padding: 15px 10px;
+                        // line-height: 1.25rem;
+                    }
                     text-decoration: none;
                     color: rgba(14,2,2,.899);
                     font-size: .875rem;
@@ -210,6 +216,7 @@
      .ResponsiveTopNavigation{
         display: none;
      }
+
     // Responsive Mobile Navigation
     @include mobile{
         .TopNavigationContainer{
@@ -285,7 +292,6 @@
            }
        }
    }
-
     // Tablet view
     @include tablet{
         .TopNavigationContainer{
@@ -361,6 +367,4 @@
            }
        }
    }
-
-  
 }

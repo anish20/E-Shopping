@@ -14,13 +14,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import SidebarNav from './SidebarNav';
-import { NavbarContext } from '@/Context/NavbarContext';
+import { ApplictaionContext } from '@/Context/ApplicationContext';
 
 const TopNavigation = () => {
-  const {openSideBar,handleOpenSidebar}=useContext(NavbarContext);
+  const {openSideBar,handleOpenSidebar,toggleDarkmode,
+    darkMode}=useContext(ApplictaionContext);
   return (
     <header className={styles.Header}>
-    <Grid className={styles.TopNavigationContainer}>
+    <Grid className={`${styles.TopNavigationContainer}`}>
         <Grid className={styles.TopInfoBar}>
         <Container className={styles.TopInfoBarContainer}>
             <Grid className={styles.Logo}>

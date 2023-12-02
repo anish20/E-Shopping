@@ -1,10 +1,11 @@
-import { NavbarContextProvider } from '@/Context/NavbarContext'
+
+import { ApplictaionContextProvider } from '@/Context/ApplicationContext'
 import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }) {
   return (
-    <NavbarContextProvider>
+    <ApplictaionContextProvider>
   <Component {...pageProps} />
-  </NavbarContextProvider>
+  </ApplictaionContextProvider>
   )
 }

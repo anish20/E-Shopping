@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import styles from './SidebarNav.module.scss'
-import { NavbarContext } from '@/Context/NavbarContext';
 import { Grid, Typography } from '@mui/material';
+import { ApplictaionContext } from '@/Context/ApplicationContext';
 
 const SidebarNav = () => {
-    const {openSideBar,handleOpenSidebar}=useContext(NavbarContext);
+    const {openSideBar,handleOpenSidebar}=useContext(ApplictaionContext);
   return (
     <>
     <Grid className={styles.Overlay}  style={{width:openSideBar ?'100%' : '0'}} onClick={handleOpenSidebar} ></Grid>

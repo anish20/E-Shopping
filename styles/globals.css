@@ -92,5 +92,57 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.dark{
+  color: #fff;;
+  background:black;
+  border:lightgray;
+}
+.light{
+  color:black;
+  background:#fff;
+  border:#444;
+}
+.main{
+  padding-top: 10px;
+}
+.swiper-button-prev{
+  background: rgba(0, 0, 0, 0.2);
+  width: 40px !important;
+  border-radius: 5px;
+}
+.swiper-button-next{
+  background: rgba(0, 0, 0, 0.2);
+  width: 40px !important;
+  border-radius: 5px;
+}
+.swiper-button-prev::after{
+  font-size: 18px !important;
+  color: #fff;
+}
+.swiper-button-next::after{
+  font-size: 18px !important;
+  color: #fff;
+}
 
-
+@media(max-width:480px) {
+  .swiper-button-next{
+    background: rgba(0, 0, 0, 0.2);
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 5px;
+  }
+  .swiper-button-next::after{
+    font-size: 15px !important;
+    color: #fff;
+  }
+  .swiper-button-prev{
+    background: rgba(0, 0, 0, 0.2);
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 5px;
+  }
+  .swiper-button-prev::after{
+    font-size: 15px !important;
+    color: #fff;
+  }
+}

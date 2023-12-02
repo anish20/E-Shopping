@@ -1,0 +1,10 @@
+@import "../../styles/Home.module.scss";
+.ContentBox{
+    padding-top: 45px;
+    @include mobile{
+        padding-top: 115px;
+    }
+    @include tablet{
+        padding-top: 115px;
+    }
+}
