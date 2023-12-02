@@ -1,6 +1,6 @@
 @import "../../styles/Home.module.scss";
 .Header{ 
-    
+    position: fixed;
     .TopNavigationContainer{
         position: fixed;
         top: 0;
@@ -267,7 +267,7 @@
                 font-size: 22px;
                 color: #80808066;
                 &:last-child{
-
+                    color: rgb(93, 40, 48) !important;
                 }
             }
             input[type=text]{
@@ -343,7 +343,7 @@
                 font-size: 22px;
                 color: #80808066;
                 &:last-child{
-
+                    color: rgb(93, 40, 48) !important;
                 }
             }
             input[type=text]{

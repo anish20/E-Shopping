@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import TopNavigation from '../TopHeader/TopNavigation'
+import { NavbarContext } from '@/Context/NavbarContext';
+import SidebarNav from '../TopHeader/SidebarNav';
+
 
 const Layout = ({children}) => {
+
+
   return (
     <>
-        <TopNavigation/>
+        <TopNavigation  />
+        <SidebarNav />
        {children}
     </>
   )
