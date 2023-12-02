@@ -123,6 +123,9 @@ a {
   font-size: 18px !important;
   color: #fff;
 }
+.swiper{
+  z-index: -1111111 !important;
+}
 
 @media(max-width:480px) {
   .swiper-button-next{
