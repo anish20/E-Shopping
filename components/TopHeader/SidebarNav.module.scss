@@ -1,0 +1,134 @@
+@import "../../styles/Home.module.scss";
+
+@include mobile{
+    .Overlay{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #c4a9a91a;
+        z-index: 2;
+    }
+    .Sidepanel {
+        height: 100%; 
+        width: 0; 
+        position: fixed;
+        z-index: 99999999; 
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        transition: 0.5s; 
+        // padding-top: 20px;
+        .UserDetails{
+            background: #b8b0b00f;
+            width: 100%;
+            padding: 10px 20px;
+            p{
+                color: #00000060;
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .Links{
+                margin-top: 8px;
+                margin-bottom: 5px;
+                display: flex;
+                gap: 8px;
+                a{
+                    text-decoration: none;
+                    color: #00000091;
+                    font-size: 14px;
+                }
+                a:first-child::after{
+                    content: "|";
+                    margin-left: 10px;
+                }
+            }
+            // height: 50px;
+        }
+       
+        .Menulist{
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            a{
+                text-decoration: none;
+                color: rgba(0, 0, 0, 0.519);
+            }
+        }
+    
+      }
+    
+   
+}
+@include tablet{
+    .Overlay{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #c4a9a91a;
+        z-index: 2;
+    }
+    .Sidepanel {
+        height: 100%; 
+        width: 0; 
+        position: fixed;
+        z-index: 99999999; 
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        transition: 0.5s; 
+        // padding-top: 20px;
+        .UserDetails{
+            background: #b8b0b00f;
+            width: 100%;
+            padding: 10px 20px;
+            p{
+                color: #00000060;
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .Links{
+                margin-top: 8px;
+                margin-bottom: 5px;
+                display: flex;
+                gap: 8px;
+                a{
+                    text-decoration: none;
+                    color: #00000091;
+                    font-size: 14px;
+                }
+                a:first-child::after{
+                    content: "|";
+                    margin-left: 10px;
+                }
+            }
+            // height: 50px;
+        }
+       
+        .Menulist{
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            a{
+                text-decoration: none;
+                color: rgba(0, 0, 0, 0.519);
+            }
+        }
+    
+      }
+    
+   
+}
+  
+ 

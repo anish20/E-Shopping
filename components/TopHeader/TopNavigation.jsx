@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import styles from './TopNavigation.module.scss'
 import { Button, Container } from 'react-bootstrap';
 import { Grid, Typography } from '@mui/material';
@@ -11,8 +11,13 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import MenuIcon from '@mui/icons-material/Menu';
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import SidebarNav from './SidebarNav';
+import { NavbarContext } from '@/Context/NavbarContext';
 
 const TopNavigation = () => {
+  const {openSideBar,handleOpenSidebar}=useContext(NavbarContext);
   return (
     <header className={styles.Header}>
     <Grid className={styles.TopNavigationContainer}>
@@ -33,7 +38,7 @@ const TopNavigation = () => {
                <Grid className={styles.IconItems}>
                     <PersonIcon />
                     <FavoriteBorderIcon />
-                    <ShoppingBagIcon />
+                    <ShoppingBagOutlinedIcon />
                     <WhatsAppIcon />
                     <DarkModeIcon titleAccess='Dark Mode' />
                </Grid>
@@ -161,7 +166,7 @@ const TopNavigation = () => {
     <Grid className={styles.ResponsiveTopNavigation}>
            <Grid className={styles.NavCantainer}>
            <Grid className={styles.LeftItem}>
-              <MenuIcon />
+              <MenuIcon onClick={handleOpenSidebar}  />
               <Grid className={styles.Logo}>
                 <Link href={"#"}>E-<span>Shopping</span></Link>
             </Grid>
@@ -170,7 +175,7 @@ const TopNavigation = () => {
            <Grid className={styles.IconItems}>
                     <WhatsAppIcon />
                     <FavoriteBorderIcon />
-                    <ShoppingBagIcon />
+                    <ShoppingBagOutlinedIcon />
                     <DarkModeIcon />
             </Grid>
            </Grid>
@@ -187,6 +192,7 @@ const TopNavigation = () => {
         </section>
       </Grid>
     </Grid>
+  
     </header>
   )
 }
