@@ -1,120 +1,366 @@
-.TopNavigationContainer{
-    position: fixed;
-    top: 0;
-    background-color: white;
-    height: 15vh;
-    width: 100vw;
-    box-shadow: 0px 12px 15px -3px rgba(0,0,0,0.1);
-    z-index: 10;
-    .TopInfoBar{
-        border-bottom: solid 1px lightgray;
-        .TopInfoBarContainer{
-            height: 8.8vh;
+@import "../../styles/Home.module.scss";
+.Header{ 
+    
+    .TopNavigationContainer{
+        position: fixed;
+        top: 0;
+        background-color: white;
+        height: 130px;
+        width: 100vw;
+        box-shadow: 0px 3px 10px -3px rgba(0,0,0,0.1);
+        z-index: 10;
+        .TopInfoBar{
+            border-bottom: solid 1px lightgray;
+            .TopInfoBarContainer{
+                height: 85px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .Logo{
+                    // width: 20%;
+                    a{
+                        text-decoration: none;
+                        font-size: 25px;
+                        font-weight: 500;
+                        span{
+                            color: green;
+                        }
+                    }
+                }
+                .Searchbar{
+                    width: 65%;
+                    .SearchBox{
+                        position: relative;
+                        border: solid 1px lightgray;
+                        padding:0;
+                        display: flex;
+                        align-items: center;
+                        height: 40px;
+                        // justify-content: space-between;
+                        gap: 5px;
+                        svg{
+                            margin-left: 10px;
+                           color: lightgray;
+                        }
+                        input[type=text]{
+                            border:none;
+                            outline: none;
+                            width: 60%;
+                          &::placeholder{
+                            color: lightgray;
+                          }
+                        }
+                        label{
+                            position: absolute;
+                            right: 0;
+                            border-left: 1px solid lightgray;
+                            display: inline-block;
+                            font-size: 12px;
+                            padding: 10px 12px;
+                            cursor: pointer;
+                            background-color: #fff8f5;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: rgb(93, 40, 48) !important;
+                            gap: 5px;
+                            svg{
+                                font-size: 14px;  
+                                color: rgb(93, 40, 48) !important;
+                            }
+                           
+                            input[type=file]{
+                                display: none;
+                            }
+                        }
+                       
+                        
+                    }
+                }
+                .LeftIcons{
+                    // width: 40%;
+                    .IconItems{
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        svg{
+                            cursor: pointer;
+                            font-size: 28px;
+                            color: rgb(93, 40, 48) !important;
+                            &:hover{
+                                opacity: 0.8;
+                            }
+                            &:nth-last-child(2){
+                               color: #25D366 !important; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .TopMenubar{
+            height: 40px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            .Logo{
-                // width: 20%;
-                a{
+           
+            .MenuListContainer{
+                .MenuItems {
+                    overflow: hidden;
+                .DropdownItem {
+                   .DropdownLink {
                     text-decoration: none;
-                    font-size: 25px;
-                    font-weight: 500;
+                    color: rgba(14,2,2,.899);
+                    font-size: .875rem;
+                    line-height: 1.25rem;
+                    padding: 15px 12px;
+                    margin: 0;
+                   
+                  }
+                 
+                }
+                  .DropdownContent {
+                    display: none;
+                    position: absolute;
+                    background-color: #fff;
+                    width: 100%;
+                    left: 0;
+                    margin-top: 10px;
+                    // top: 10px;
+                    // bottom: -25px;
+                    border-top: solid 1px lightgray;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+                    transition: 0.3s;
+                    .MegaContentBox{
+                        height: 450px;
+                        .MegaRow{
+                            height: 100%;
+                           
+                            .Col1, .Col3{
+                                background: #8080800d;
+                              }
+                            .Col1,.Col2,.Col3,.Col4,.Col5,.Col6{
+                                h2{
+                                    font-size: 16px!important;
+                                    text-transform: uppercase;
+                                    margin-bottom: 10px;
+                                }
+                                padding: 10px 20px;
+                                height: 100%;
+                                .subMenuItemLink{
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 6px;
+                                    a{
+                                        text-decoration: none;
+                                        font-size: 0.846rem;
+                                        color: rgba(14,2,2,.899);
+                                        line-height: 1.25rem;
+                                    }
+                                }
+                                .ImageShow{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    padding: 0;
+                                    width: 100%;
+                                    border: solid 1px lightgray;
+                                    height: 400px;
+                                   img{
+                                        width: 100%;
+                                        height: 350px;
+                                        object-fit: fill;
+                                    }
+                                    p{
+                                      font-size: 14px;
+                                      font-weight: 600;
+                                    }
+                                    a{
+                                        text-decoration: none;
+                                        text-transform: uppercase;
+                                        font-size: 12px;
+                                    }
+    
+                                }
+                            }
+                        }
+                       
+                    }
+                   
+                  }
+                  .DropdownItem:hover .DropdownContent {
+                    display: block;
+                  }
+                  //DropdownLinkNot
+                  
+                  
+            }
+            }
+            
+           
+    
+           
+        }
+
+
+
+      
+        
+    }
+     .ResponsiveTopNavigation{
+        display: none;
+     }
+    // Responsive Mobile Navigation
+    @include mobile{
+        .TopNavigationContainer{
+            display: none;
+        }
+        .ResponsiveTopNavigation{
+            display: flex;  
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            height: 100px;
+            padding: 0 15px;
+            box-shadow: 0px 2px 15px -3px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            background-color: white;
+            width: 100%;
+            z-index: 11111111111;
+            // border-bottom: solid 1px lightgray;
+           .NavCantainer{
+            display: flex;
+            justify-content: space-between;
+            // background-color: #25D366;
+            align-items: center;
+           
+            .LeftItem{
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                .Logo a{
+                    text-decoration: none;
+                    font-size: 20px;
                     span{
                         color: green;
                     }
                 }
             }
-            .Searchbar{
-                width: 65%;
-                .SearchBox{
-                    position: relative;
-                    border: solid 1px lightgray;
-                    padding:0;
-                    display: flex;
-                    align-items: center;
-                    height: 5.5vh;
-                    // justify-content: space-between;
-                    gap: 5px;
-                    svg{
-                        margin-left: 10px;
-                       color: lightgray;
-                    }
-                    input[type=text]{
-                        border:none;
-                        outline: none;
-                        width: 60%;
-                      &::placeholder{
-                        color: lightgray;
-                      }
-                    }
-                    label{
-                        position: absolute;
-                        right: 0;
-                        border-left: 1px solid lightgray;
-                        display: inline-block;
-                        font-size: 12px;
-                        padding: 10px 12px;
-                        cursor: pointer;
-                        background-color: #fff8f5;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        color: rgb(93, 40, 48) !important;
-                        gap: 5px;
-                        svg{
-                            font-size: 14px;  
-                            color: rgb(93, 40, 48) !important;
-                        }
-                       
-                        input[type=file]{
-                            display: none;
-                        }
-                    }
-                   
-                    
-                }
-            }
-            .LeftIcons{
-                // width: 40%;
-                .IconItems{
-                    display: flex;
-                    align-items: center;
-                    gap: 20px;
-                    svg{
-                        cursor: pointer;
-                        font-size: 28px;
-                        color: rgb(93, 40, 48) !important;
-                        &:hover{
-                            opacity: 0.8;
-                        }
-                        &:nth-last-child(2){
-                           color: #25D366 !important; 
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .TopMenubar{
-        height: 5.2vh;
-        display: flex;
-        align-items: center;
-        .MenuListContainer{
-            width: 100%;
-            .MenuItems{
+            .RightItem .IconItems{
                 display: flex;
                 align-items: center;
-                gap: 30px;
-                a{
-                    text-decoration: none;
-                    color: rgba(14, 2, 2, 0.899);
+                gap: 15px;
+                svg:nth-child(1){
+                    color: #25D366;
+                }
+            }
+           }
+           .SearchBoxContainer{
+            border: solid 1px lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px 8px;
+            gap: 2px;
+            svg{
+                font-size: 22px;
+                color: #80808066;
+                &:last-child{
+
+                }
+            }
+            input[type=text]{
+                border: none;
+                outline: none;
+                width: 100%;
+                &::placeholder{
                     font-size: 14px;
-                    &:last-child{
-                        color: rgb(93, 40, 48) !important;
-                        font-weight: 500;
+                    color: #55535366;
+                }
+            }
+            input[type=file]{
+               display: none;
+            }
+           }
+       }
+   }
+
+    // Tablet view
+    @include tablet{
+        .TopNavigationContainer{
+            display: none;
+        }
+        .ResponsiveTopNavigation{
+            display: flex;  
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            height: 100px;
+            padding: 0 15px;
+            box-shadow: 0px 2px 15px -3px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            background-color: white;
+            width: 100%;
+            z-index: 11111111111;
+            // border-bottom: solid 1px lightgray;
+           .NavCantainer{
+            display: flex;
+            justify-content: space-between;
+            // background-color: #25D366;
+            align-items: center;
+           
+            .LeftItem{
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                .Logo a{
+                    text-decoration: none;
+                    font-size: 20px;
+                    span{
+                        color: green;
                     }
                 }
             }
-        }
-    }
+            .RightItem .IconItems{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                svg:nth-child(1){
+                    color: #25D366;
+                }
+            }
+           }
+           .SearchBoxContainer{
+            border: solid 1px lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px 8px;
+            gap: 2px;
+            svg{
+                font-size: 22px;
+                color: #80808066;
+                &:last-child{
+
+                }
+            }
+            input[type=text]{
+                border: none;
+                outline: none;
+                width: 100%;
+                &::placeholder{
+                    font-size: 14px;
+                    color: #55535366;
+                }
+            }
+            input[type=file]{
+               display: none;
+            }
+           }
+       }
+   }
+
+  
 }
